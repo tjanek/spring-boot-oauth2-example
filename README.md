@@ -17,7 +17,7 @@ cd resource-app
 ## Authorize (get token)
 
 ```
-curl -POST app:app_secret@localhost:8090/oauth/token -d 
+curl -POST app:app_secret@localhost:8090/oauth/token -d \
 "grant_type=password&client_id=app&client_secret=app_pass&username=user&password=pass"
 ```
 

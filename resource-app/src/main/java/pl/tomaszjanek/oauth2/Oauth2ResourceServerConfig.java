@@ -204,8 +204,8 @@ public class Oauth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
             }
 
             OAuth2Request build() {
-                return new OAuth2Request(null, this.clientId, new HashSet<>(this.authorities), true, new HashSet<>(this.scopes),
-                        null, null, null, null);
+                return new OAuth2Request(null, this.clientId, new HashSet<>(this.authorities),
+                        true, new HashSet<>(this.scopes), null, null, null, null);
             }
         }
 

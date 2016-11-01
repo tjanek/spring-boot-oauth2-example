@@ -21,6 +21,7 @@ jar {
     baseName = 'resource-app'
     version = '0.0.1-SNAPSHOT'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -32,6 +33,7 @@ repositories {
 }
 
 dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-security')
     compile('org.springframework.security.oauth:spring-security-oauth2')
     compile("org.springframework.boot:spring-boot-devtools")

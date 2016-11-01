@@ -25,6 +25,6 @@ public class Oauth2AuthorizationServerConfig extends AuthorizationServerConfigur
         clients.inMemory()
                 .withClient("app").secret("app_secret")
                 .authorizedGrantTypes("authorization_code", "refresh_token", "password")
-                .scopes("shop").authorities("ROLE_ADMIN");
+                .scopes("shop").authorities("ROLE_ADMIN", "ROLE_USER");
     }
 }

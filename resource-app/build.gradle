@@ -4,9 +4,6 @@ buildscript {
     }
     repositories {
         mavenCentral()
-        maven {
-            url 'http://repository.jboss.org/nexus/content/groups/public'
-        }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -27,9 +24,6 @@ targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        url 'http://repository.jboss.org/nexus/content/groups/public'
-    }
 }
 
 dependencies {

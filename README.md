@@ -3,6 +3,8 @@
 ## Generate Keystore
 ```
 keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
+
+https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html
 ```
 
 ## Public Key

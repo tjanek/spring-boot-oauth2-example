@@ -1,5 +1,15 @@
 # Spring Boot OAuth2 Example
 
+## Generate Keystore
+```
+keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
+```
+
+## Public Key
+```
+keytool -list -rfc --keystore keystore.jks | openssl x509 -inform pem -pubkey
+```
+
 ## Running Authorization Server
 
 ```

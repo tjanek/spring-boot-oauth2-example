@@ -53,6 +53,7 @@ public class Oauth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
         }
     }
 
+    /*
     @Bean
     public ResourceServerTokenServices userInfoTokenServices() {
         return new ScopedUserInfoTokenServices(
@@ -60,6 +61,7 @@ public class Oauth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
                 resourceServerProperties.getClientId()
         );
     }
+    */
 
     /*
         Custom copy of

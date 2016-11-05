@@ -88,6 +88,12 @@ public class Oauth2AuthorizationServer {
         }
 
         @Override
+        public void configure(AuthorizationServerSecurityConfigurer oauthServer)
+                throws Exception {
+            oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()");
+        }
+
+        @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
             clients.inMemory()
                     .withClient("web")

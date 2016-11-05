@@ -1,16 +1,18 @@
 # Spring Boot OAuth2 Example
 
-## Generate Keystore
-```
-keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048
+## Generating PEM file
 
-https://docs.oracle.com/cd/E19798-01/821-1841/gjrgy/index.html
+```
+openssl genrsa -out jwt.pem 2048
 ```
 
-## Public Key
+## Get private / public key
+
 ```
-keytool -list -rfc --keystore keystore.jks | openssl x509 -inform pem -pubkey
+openssl rsa -in jwt.pem
+openssl rsa -in jwt.pem -pubout
 ```
+
 
 ## Running Authorization Server
 
@@ -29,19 +31,12 @@ cd resource-app
 ## Authorize (get token)
 
 ```
-curl -POST app:app_secret@localhost:8090/oauth/token -d \
-"grant_type=password&client_id=app&client_secret=app_pass&username=user&password=pass"
-```
-
-## User Info
-
-```
-curl -H "Authorization: Bearer TOKEN" http://localhost:8090/userInfo
+curl -POST web:pass@localhost:8090/oauth/token -d ”grant_type=password&username=admin&password=pass”
 ```
 
 ## Accesing Secured Endpoint
 
 ```
-curl -H "Authorization: Bearer TOKEN" localhost:8080/greeting/Tom
+curl -H "Authorization: Bearer TOKEN" localhost:8080/greeting
 ```
 

@@ -1,17 +1,13 @@
 server:
-    port: 8080
+    port: 8081
 
-security:
-    oauth2:
-        resource:
-            jwt:
-                key-value: |
-                    -----BEGIN PUBLIC KEY-----
-                    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv7Usy564M2S/qBRpwgUD
-                    COVMQzFIB8ek2/YsYisY/PnCHPwsY/lETdSav3+OQ7o5/a8rWqTmUspK/wfaXbnE
-                    fG4RFSUaUvSRUzg6NpoO1uEi5AGK+nn+fX0idZd7azV2MPIKMWTd+VROYcOLBJIl
-                    HLk7gevKGBO4qeQDEcgRMGre0BZzhxnTZ4n/3rej8W847bTd78L0pP5noHwqKKnX
-                    S9ic0hL3zDvcSlyogyuSkwxNqGs8K2ZKQP8PFT652FOQUBmc6dQcd00hWjkTAtTg
-                    P7JdylG6DjHVSR5kMoP07AfI1IVzENrZjdI7jLXKny2zJvL7bnEe807dpD7xilMm
-                    qwIDAQAB
-                    -----END PUBLIC KEY-----
+jwtPublicKey: |
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAv7Usy564M2S/qBRpwgUD
+    COVMQzFIB8ek2/YsYisY/PnCHPwsY/lETdSav3+OQ7o5/a8rWqTmUspK/wfaXbnE
+    fG4RFSUaUvSRUzg6NpoO1uEi5AGK+nn+fX0idZd7azV2MPIKMWTd+VROYcOLBJIl
+    HLk7gevKGBO4qeQDEcgRMGre0BZzhxnTZ4n/3rej8W847bTd78L0pP5noHwqKKnX
+    S9ic0hL3zDvcSlyogyuSkwxNqGs8K2ZKQP8PFT652FOQUBmc6dQcd00hWjkTAtTg
+    P7JdylG6DjHVSR5kMoP07AfI1IVzENrZjdI7jLXKny2zJvL7bnEe807dpD7xilMm
+    qwIDAQAB
+    -----END PUBLIC KEY-----

@@ -67,7 +67,7 @@ public class Oauth2AuthorizationServer {
 
         @Bean
         public JwtAccessTokenConverter tokenEnhancer() {
-            JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
+            JwtAccessTokenConverter converter = new Oauth2TokenEnhancer();
             converter.setSigningKey(privateKey);
             converter.setVerifierKey(publicKey);
             return converter;
@@ -100,8 +100,9 @@ public class Oauth2AuthorizationServer {
                     .authorities("ROLE_USER", "ROLE_ADMIN")
                     //.resourceIds("shop")
                     .scopes("read", "write")
+                    .secret("pass")
                     .authorizedGrantTypes("password", "refresh_token")
-                    .secret("pass");
+            ;
         }
 
     }
